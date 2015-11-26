@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+            aside { 
+                background: white;
+                border: 2px solid #0e4474;
+                border-radius: 4px;
+                width: 265px;
+                
+            }
+            aside .header {
+                width: 100%;
+                height: 47px;
+                background: #0e4474
+            }
+            aside .header h4 {
+                color: white;
+                padding-left: 12px;
+                font-family: "Arial";
+                font-size: 20px;
+                letter-spacing: -0.5px;
+                line-height: 45px;
+            }
+            aside .header h4:after {
+                width: 15px;
+                height: 6px;
+                background-color: #88b3da;
+            }
+        </style>
+
+    </head>
+    <body>
+        <aside>
+            <div class="header">
+                <h4 class="title">Forecast</h4>
+                <div class="icon-dropdown"></div>
+                <div class="icon-docking"></div>
+            </div>
+            <div class="content">
+                
+                <h6>1 Flight, 30 days</h6>
+                
+                <div class="main-progressbar">
+                    <label>Budget</label>
+                    <label>$18,000 Remaining</label>
+                    <div class="background-bar">
+                        <div class="flexible-bar">$132,000</div>
+                    </div>
+                    <p>$0</p>
+                    <p>$1590,000</p>   
+                </div>
+                
+                <div class="details">
+                    <ul>
+                        <li><span>250,000</span><p>Impressions</p></li>
+                        <li><span>1.55</span><p>ePCM</p></li>
+                        <li><span>1.25</span><p>target ePCM</p></li>
+                    </ul>
+                </div>
+                
+                <input type="checkbox" id="increase-bid">
+                <label for="increase-bid">Increase bid to $1.10 to spend full budget</label>
+                
+                <hr>
+                
+                
+            </div>
+        </aside>
+        
+    </body>
+</html>
