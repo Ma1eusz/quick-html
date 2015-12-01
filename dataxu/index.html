@@ -1,78 +1,178 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                border: none;
-            }
-            aside { 
-                background: white;
-                border: 2px solid #0e4474;
-                border-radius: 4px;
-                width: 265px;
-                
-            }
-            aside .header {
-                width: 100%;
-                height: 47px;
-                background: #0e4474
-            }
-            aside .header h4 {
-                color: white;
-                padding-left: 12px;
-                font-family: "Arial";
-                font-size: 20px;
-                letter-spacing: -0.5px;
-                line-height: 45px;
-            }
-            aside .header h4:after {
-                width: 15px;
-                height: 6px;
-                background-color: #88b3da;
-            }
-        </style>
 
-    </head>
-    <body>
-        <aside>
-            <div class="header">
-                <h4 class="title">Forecast</h4>
-                <div class="icon-dropdown"></div>
-                <div class="icon-docking"></div>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        body{
+            padding: 50px;
+        }
+        aside {
+            background: white;
+            border: 2px solid #0e4474;
+            border-radius: 4px;
+            width: 265px;
+
+        }
+        aside .header {
+            width: 100%;
+            height: 47px;
+            background: #0e4474
+        }
+        aside .header h4 {
+            color: white;
+            padding-left: 12px;
+            font-family: "Arial";
+            font-size: 20px;
+            letter-spacing: -0.5px;
+            line-height: 45px;
+        }
+        aside .header h4:after {
+            width: 15px;
+            height: 6px;
+            background-color: #88b3da;
+        }
+        .progressbars{
+            margin: 0 12px;
+        }
+        .progressbars p{
+            float: left;
+            font-family: Arial;
+            font-size: 13px;
+            color: #0e4474;
+            line-height: 21px;
+        }
+        .background-bar{
+            float: right;
+            background-color: #eff3f5;
+            border: 1px solid #d9e0e7;
+            width: 110px;
+            height: 19px;
+            position: relative;
+        }
+
+        .background-bar .flexible-bar{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            line-height: 19px;
+            background-color: #0e4474;
+            border: 1px solid #0d3f6d;
+            color: white;
+            font-family: Arial;
+            line-height: 19px;
+        }
+        h6{
+            font-family: Arial;
+            font-size: 16px;
+            color: #0e4474;
+            margin: 16px 0;
+        }
+
+        .progressbars hr{
+            background-color: #b3c5d3;
+            height: 1px;
+            width: 100%;
+            margin: 5px 0;
+            clear: both;
+            float: left;
+        }
+        button.btn{
+            float: right;
+            border: 1px solid #83cdb6;
+            border-radius: 1px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            background-color: white;
+            color: #83cdb6;
+
+        }
+    </style>
+
+</head>
+<body>
+<aside>
+    <div class="header">
+        <h4 class="title">Forecast</h4>
+        <div class="icon-dropdown"></div>
+        <div class="icon-docking"></div>
+    </div>
+    <div class="content">
+
+        <h6>1 Flight, 30 days</h6>
+
+        <div class="main-progressbar">
+            <label>Budget</label>
+            <label>$18,000 Remaining</label>
+            <div class="background-bar">
+                <div class="flexible-bar">$132,000</div>
             </div>
-            <div class="content">
-                
-                <h6>1 Flight, 30 days</h6>
-                
-                <div class="main-progressbar">
-                    <label>Budget</label>
-                    <label>$18,000 Remaining</label>
-                    <div class="background-bar">
-                        <div class="flexible-bar">$132,000</div>
-                    </div>
-                    <p>$0</p>
-                    <p>$1590,000</p>   
-                </div>
-                
-                <div class="details">
-                    <ul>
-                        <li><span>250,000</span><p>Impressions</p></li>
-                        <li><span>1.55</span><p>ePCM</p></li>
-                        <li><span>1.25</span><p>target ePCM</p></li>
-                    </ul>
-                </div>
-                
-                <input type="checkbox" id="increase-bid">
-                <label for="increase-bid">Increase bid to $1.10 to spend full budget</label>
-                
-                <hr>
-                
-                
+            <p>$0</p>
+            <p>$1590,000</p>
+        </div>
+
+        <div class="details">
+            <ul>
+                <li><span>250,000</span><p>Impressions</p></li>
+                <li><span>1.55</span><p>ePCM</p></li>
+                <li><span>1.25</span><p>target ePCM</p></li>
+            </ul>
+        </div>
+
+        <input type="checkbox" id="increase-bid">
+        <label for="increase-bid">Increase bid to $1.10 to spend full budget</label>
+
+        <hr>
+
+        <section class="progressbars">
+
+            <h6>Spend Available by Targeting</h6>
+
+            <p>Inventory Suppliers</p>
+            <div class="background-bar">
+                <div class="flexible-bar" style="width: 100%;">100%</div>
             </div>
-        </aside>
-        
-    </body>
+
+            <hr>
+
+            <p>Geography</p>
+            <div class="background-bar">
+                <div class="flexible-bar" style="width: 79%;">79%</div>
+            </div>
+
+            <hr>
+
+            <p>Creatives</p>
+            <div class="background-bar">
+                <div class="flexible-bar" style="width: 100%;">100%</div>
+            </div>
+
+            <hr>
+
+            <p>Brand safety</p>
+            <div class="background-bar">
+                <div class="flexible-bar" style="width: 89%;">89%</div>
+            </div>
+
+            <hr>
+
+            <p>Audience Size</p>
+            <button type="button" class="btn">Set</button>
+
+        </section>
+
+        <hr>
+
+
+    </div>
+</aside>
+
+</body>
 </html>
