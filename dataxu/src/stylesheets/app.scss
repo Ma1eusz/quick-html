@@ -1,13 +1,15 @@
 @import 'reset';
+$color-primary: #0e4474;
+$color-secondary: #c51f47;
 
 body {
-  padding: 50px;
+  padding: 5px;
   font-family: "Lato";
 }
 
 aside {
   background: white;
-  border: 2px solid #0e4474;
+  border: 2px solid $color-primary;
   border-radius: 4px;
   width: 265px;
 
@@ -30,7 +32,9 @@ aside {
 
     .main-progressbar {
       font-size: 11px;
+
       label {
+
         &:nth-child(1) {
           color: #0e4474;
           float: left;

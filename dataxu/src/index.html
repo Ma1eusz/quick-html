@@ -2,9 +2,12 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/app.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <script src="./js/angular.js"></script>
+        <script src="./js/app.js"></script>
     </head>
-    <body>
-        <aside>
+    <body ng-app='application'>
+        <aside ng-controller='mainCtrl'>
 
             <div class="header">
                 <h4 class="title">Forecast</h4>
@@ -45,28 +48,28 @@
 
                     <p>Inventory Suppliers</p>
                     <div class="background-bar">
-                        <div class="flexible-bar" style="width: 100%;">100%</div>
+                        <div class="flexible-bar" style="width: {{targeting.inventory}}%;">{{targeting.inventory}}%</div>
                     </div>
 
                     <hr>
 
                     <p>Geography</p>
                     <div class="background-bar">
-                        <div class="flexible-bar" style="width: 79%;">79%</div>
+                        <div class="flexible-bar" style="width: {{targeting.geography}}%;">{{targeting.geography}}%</div>
                     </div>
 
                     <hr>
 
                     <p>Creatives</p>
                     <div class="background-bar">
-                        <div class="flexible-bar" style="width: 100%;">100%</div>
+                        <div class="flexible-bar" style="width: {{targeting.creatives}}%;">{{targeting.creatives}}%</div>
                     </div>
 
                     <hr>
 
                     <p>Brand safety</p>
                     <div class="background-bar">
-                        <div class="flexible-bar" style="width: 89%;">89%</div>
+                        <div class="flexible-bar" style="width: {{targeting.safety}}%;">{{targeting.safety}}%</div>
                     </div>
 
                     <hr>
