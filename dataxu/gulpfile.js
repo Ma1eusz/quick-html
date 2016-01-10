@@ -4,7 +4,7 @@ var sass =   require('gulp-sass');
 var concat = require('gulp-concat');
 
 var src = {
-  html: './src/index.html',
+  html: './src/*.html',
   scss: './src/stylesheets/app.scss',
   jsApp: './src/scripts/**/*.js',
   jsVendor: './node_modules/angular/angular.js'    
